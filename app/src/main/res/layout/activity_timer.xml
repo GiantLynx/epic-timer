@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_marginLeft="26dp"
+        android:id="@+id/plus_bar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/hours_add"
+            android:onClick="onClickAddHours"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_marginLeft="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/minutes_add_ten"
+            android:layout_marginRight="-4.0dp"
+            android:onClick="onClickAddMinutesTen"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/minutes_add"
+            android:layout_marginLeft="-4.0dp"
+            android:onClick="onClickAddMinutes"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_marginLeft="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/seconds_add_ten"
+            android:layout_marginRight="-4.0dp"
+            android:onClick="onClickAddSecondsTen"
+            />.
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dp"
+            android:text="+"
+            android:id="@+id/seconds_add"
+            android:onClick="onClickAddSeconds"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="70sp"
+        android:layout_below="@+id/plus_bar"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/minus_bar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_view"
+        android:layout_alignLeft="@+id/plus_bar"
+        android:layout_alignStart="@+id/plus_bar">
+
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/hours_sub"
+            android:onClick="onClickSubHours"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_marginLeft="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/minutes_sub_ten"
+            android:layout_marginRight="-4.0dp"
+            android:onClick="onClickSubMinutesTen"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/minutes_sub"
+            android:layout_marginLeft="-4.0dp"
+            android:onClick="onClickSubMinutes"
+            />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_marginLeft="9dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/seconds_sub_ten"
+            android:layout_marginRight="-4.0dp"
+            android:onClick="onClickSubSecondsTen"
+            />.
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-4.0dp"
+            android:text="-"
+            android:id="@+id/seconds_sub"
+            android:onClick="onClickSubSeconds"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/minus_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickStart"
+        android:text="@string/stopwatch"
+        android:drawableLeft="@drawable/timer_button" />
+
+
+    <Button
+        android:id="@+id/countdown_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickCountdown"
+        android:text="@string/countdown"
+        android:drawableLeft="@drawable/countdown_button"
+        android:layout_alignLeft="@+id/start_button"
+        android:layout_alignStart="@+id/start_button"
+        android:layout_alignRight="@+id/start_button"
+        android:layout_alignEnd="@+id/start_button"
+        android:layout_below="@+id/start_button"
+        android:textSize="15sp"
+        />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickReset"
+        android:text="@string/reset"
+        android:drawableLeft="@drawable/reset_button"
+        android:layout_alignLeft="@+id/start_button"
+        android:layout_alignStart="@+id/start_button"
+        android:layout_alignRight="@+id/start_button"
+        android:layout_alignEnd="@+id/start_button"
+        android:layout_below="@+id/countdown_button" />
+
+
+</RelativeLayout>

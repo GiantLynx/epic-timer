@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Эпичный Таймер</string>
+
+    <string name="action_settings">Настройки</string>
+    <string name="start">Стар</string>
+    <string name="stop">Стоп</string>
+    <string name="reset">Сброс</string>
+    <string name="stopwatch">Секундомер\nВкл|Выкл</string>
+    <string name="countdown">Таймер\nВкл|Выкл</string>
+</resources>

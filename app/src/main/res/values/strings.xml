@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Epic Timer</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="reset">Reset</string>
+    <string name="stopwatch">Stopwatch\nOn|Off</string>
+    <string name="countdown">Countdown\nOn|Off</string>
+</resources>
